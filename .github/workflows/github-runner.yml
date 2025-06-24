@@ -1,0 +1,15 @@
+name: GitHub-hosted Runner Demo
+
+on: push
+
+jobs:
+  github-hosted-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check environment
+        run: |
+          echo "Running on GitHub-hosted runner"
+          echo "OS: $(uname -a)"
