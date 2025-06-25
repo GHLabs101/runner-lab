@@ -1,0 +1,15 @@
+name: Self-hosted Runner Demo
+
+on: push
+
+jobs:
+  self-hosted-job:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check environment
+        run: |
+          echo "Running on self-hosted runner"
+          echo "OS: $(uname -a)"
